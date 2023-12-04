@@ -81,4 +81,26 @@ let orders = [
   },
 ];
 
-// Start coding here
+//ให้ใช้ For Loop หาชื่อของสินค้าที่มีราคาต่อชิ้นสูงที่สุดใน orders และนำชื่อสินค้านั้นมาแสดงผลบนหน้าจอ Console
+//result = The most expensive product in orders: Wine - Red, Harrow Estates, Cab
+
+//process = - let make loop for get all variable <loop>
+//- then if totalprice most expencive give productName back <if else if>
+//- use equelity for comparision find array most expensive <=== > <==> *const variable keep totalprice
+//- and keep it in one variable
+//- get result
+//*forget to find mostExpensive price number and if this variable > 0 give it productname
+let maxPrice = 0;
+let mostExpensive;
+for (let i = 0; i < orders.length; i++) {
+  let totalPrice = orders[i].productPrice * orders[i].productQuantity;
+  if (totalPrice > maxPrice) {
+    maxPrice = totalPrice;
+    console.log(orders[i].productName);
+    mostExpensive = orders[i];
+  }
+}
+
+console.log(
+  `The most expensive product in orders: ${mostExpensive.productName}`
+);

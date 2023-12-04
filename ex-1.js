@@ -81,4 +81,21 @@ let orders = [
   },
 ];
 
-// Start coding here
+// goal = let get total amount make by *For Loop*
+// -  Total amount of the orders: 62,255,151 Baht
+
+// resolve = - make loop for get sum of totalamount <loop>
+//- how to get totalamount is productpriceAll * productquantityAll and take them to variable for easy use<variable value>
+// - let get sum into totalamount if cindition true <if else if>
+// - put it into totalamount variable <variavle>
+// - after that return totalamount
+
+let totalAmount = 0;
+for (let i = 0; i < orders.length; i++) {
+  const sumProduct = orders[i].productPrice * orders[i].productQuantity;
+  if (sumProduct > 1) {
+    totalAmount = totalAmount + sumProduct;
+    console.log(sumProduct);
+  }
+}
+console.log(`Total amount of orders: ${totalAmount}`);
