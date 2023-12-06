@@ -82,3 +82,15 @@ let orders = [
 ];
 
 // Start coding here
+let findExpensiveOrder = (order) =>{
+  let expensivePrice = null;
+  let expensiveOrderID = null;
+  for(let item of order){
+    if((item.productPrice*item.productQuantity) > expensivePrice){
+      expensivePrice = item.productPrice*item.productQuantity
+      expensiveOrderID = item.id
+    }
+  }
+  return console.log("The most expensive order is order id "+expensiveOrderID+" "+`(${expensivePrice} Bath)`)
+}
+findExpensiveOrder(orders)

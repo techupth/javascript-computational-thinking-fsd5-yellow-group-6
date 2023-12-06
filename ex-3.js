@@ -82,3 +82,13 @@ let orders = [
 ];
 
 // Start coding here
+let sumOfPerson = (order,name) =>{
+  let totalOrderPerson = null;
+  for(let item of order){
+    if(item.customerName === name){
+      totalOrderPerson = totalOrderPerson + (item.productPrice*item.productQuantity)
+    }else{}
+  }
+  return console.log("Total paid amount of "+name+": "+totalOrderPerson+" Baht")
+}
+sumOfPerson(orders,"Birdie Shepland")
